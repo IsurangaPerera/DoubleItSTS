@@ -4,30 +4,38 @@
 
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.wordpress.isurangaperera.cxf-sts-tutorial</groupId>
-        <artifactId>cxf-sts-tutorial</artifactId>
+        <groupId>com.wordpress.isurangaperera.web-service-tutorial</groupId>
+        <artifactId>web-service-tutorial</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>cxf-sts-tutorial-stswar</artifactId>
+    <artifactId>web-service-tutorial-stswar</artifactId>
     <name>${stswar.module.name}</name>
     <packaging>war</packaging>
+    
+    <properties>
+            <cxf.version>3.0.1</cxf.version>
+    </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.apache.cxf.services.sts</groupId>
             <artifactId>cxf-services-sts-core</artifactId>
+	    <version>${cxf.version}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-ws-mex</artifactId>
+	    <version>${cxf.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-jdk14</artifactId>
+	    <version>1.7.24</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
+            <version>4.3.2.RELEASE</version>
         </dependency>
     </dependencies>
 

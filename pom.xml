@@ -14,7 +14,7 @@
         <module>service</module>
         <module>war</module>
         <module>client</module>
-        <module>sts-war</module>
+        <module>stswar</module>
     </modules>
 
     <prerequisites>
@@ -90,21 +90,14 @@
                     <artifactId>cxf-rt-transports-http</artifactId>
                     <version>${cxf.version}</version>
                 </dependency>
+		<dependency>
+            	    <groupId>org.apache.cxf</groupId>
+                    <artifactId>cxf-rt-ws-security</artifactId>
+		    <version>${cxf.version}</version>
+        	</dependency>
             </dependencies>
         </profile>
 
-        <profile>
-            <!-- See http://metro.java.net/guide/ch02.html#using-mavenized-metro-binaries
-                 for more Metro/Maven config info -->
-            <id>Metro</id>
-            <dependencies>
-                <dependency>
-                    <groupId>org.glassfish.metro</groupId>
-                    <artifactId>webservices-rt</artifactId>
-                    <version>2.3</version>
-                </dependency>
-            </dependencies>
-        </profile>
     </profiles>
 
 </project>
